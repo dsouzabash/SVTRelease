@@ -15,8 +15,10 @@ app.use(express.static(__dirname + '/public'));
 var sql = require("mssql");
     // config for your database
 var config = {
-	user: 'SchedAdmin',
-	password: '$VTS0lut!ons1',
+	//user: 'SchedAdmin',
+	//password: '$VTS0lut!ons1',
+	user: 'adsouza',
+	password: 'SVTSolutions1',
 	server: '10.10.16.40', 
 	database: 'Schedule' 
 };
