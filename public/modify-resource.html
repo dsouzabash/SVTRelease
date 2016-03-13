@@ -1,0 +1,16 @@
+<div class="table-responsive">
+				<table class="table table-striped" ng-controller="resourceAdminController as resAdminCtrl" border='1'>
+					<thead>
+						<tr>
+							<th>Resource Name</th>
+							<th>Resource Type</th>
+					</tr>
+				  </thead>
+				  <tbody ng-repeat="resList in resAdminCtrl.resList">
+					<tr>
+					  <td contenteditable='true'>{{resList.resName}}</td>
+					  <td contenteditable='true'>{{resList.resType}}</td>
+					</tr>
+				  </tbody>
+				</table>
+			  </div>

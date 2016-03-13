@@ -1,0 +1,33 @@
+<div class="container-fluid">
+			  <div class="row">
+				  <form name="createResourceForm" ng-controller="createResController as createResCtrl" ng-submit="createResForm.$valid && createResCtrl.createRes(Res)" novalidate>
+					<div class="col-xs-3 form-group">
+						<input type="text" class="form-control" id="resName" ng-model="createResCtrl.resName" placeholder="Resource Name" />
+					</div>
+					<div class="col-xs-3 form-group">
+						<input type="text" class="form-control" id="resType" ng-model="createResCtrl.resType" placeholder="Resource Type" />
+					</div>
+					<div class="col-xs-6 form-group">
+						<input type="submit" value = "Create" class ="btn btn-default" />
+					</div>
+				  </form>
+			  </div>
+			<div class = "row">
+				<div class="table-responsive">
+					<table class="table table-striped" ng-controller="resourceAdminController as resAdminCtrl" border='1'>
+						<thead>
+						<tr>
+						  <th>Resource Name</th>
+						  <th>Resource Type</th>
+						</tr>
+					  </thead>
+					  <tbody ng-repeat="resList in resAdminCtrl.resList">
+						<tr>
+						  <td>{{resList.resName}}</td>
+						  <td>{{resList.resType}}</td>
+						</tr>
+					  </tbody>
+					</table>
+			  </div>
+			</div>
+		  </div>
